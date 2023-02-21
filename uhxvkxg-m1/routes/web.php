@@ -14,15 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/about');
+    return view('group');
 });
-Route::get('/about', function () {
-    return view('/about');
-});
-
+Route::get('/','App\Http\Controllers\grops@show');
 Auth::routes();
-Route::get('/gde', function () {
-    return view('/gde');
-});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//Route::get('/about', [App\Http\Controllers\product::class, 'slider'])->name('about');
