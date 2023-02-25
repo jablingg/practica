@@ -1,0 +1,32 @@
+.group {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /*Флексы равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера.
+ */
+}
+
+.chel {
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.chel > img {
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+

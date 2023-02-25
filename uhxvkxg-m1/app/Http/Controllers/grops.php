@@ -11,7 +11,7 @@ class grops extends Controller
     
         public function show() {
             $a =DB::table('tests')
-            ->select('id','img','surname','name')
+            ->select('id','img','price','name','description','category','production_yaer')
             ->orderby('name', 'desc')
             ->get('id','name');
             $a == "0";

@@ -1,0 +1,2 @@
+[Sat Feb 25 01:16:25.351032 2023] [negotiation:error] [pid 68987] [client 192.168.2.81:57283] AH00687: Negotiation: discovered file(s) matching request: /srv/users/vybtfafs/uhxvkxg-m1/resources/views/where (None could be negotiated)., referer: http://uhxvkxg-m1.wsr.ru/public/
+[Sat Feb 25 01:16:27.589390 2023] [negotiation:error] [pid 68987] [client 192.168.2.81:57283] AH00687: Negotiation: discovered file(s) matching request: /srv/users/vybtfafs/uhxvkxg-m1/resources/views/group (None could be negotiated)., referer: http://uhxvkxg-m1.wsr.ru/public/

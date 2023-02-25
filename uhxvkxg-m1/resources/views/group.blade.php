@@ -1,9 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-@foreach ($a as $b)
-    <img src="{{ $b->img }}" width="400px" height="400px">
-    <h1>{{ $b->name }}</h1>
-    <h1>{{ $b->surname }}</h1>
-    @endforeach
+    
+
+        <div class="group">
+            @foreach ($a as $b)
+            <div class="chel">
+                <img class="logs" src="{{ $b->img }}">
+                <h1>{{ $b->name }}</h1>
+                <h1>{{ $b->price }}</h1>
+                
+            </div>
+            @endforeach 
+        </div>
+            
 @endsection

@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('group');
 });
 Route::get('/','App\Http\Controllers\grops@show');
+Route::get('/where', function () {
+    return view('where');
+});
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
