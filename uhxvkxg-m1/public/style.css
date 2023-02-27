@@ -1,4 +1,4 @@
-.group {
+.catalog {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -8,21 +8,84 @@
  */
 }
 
-.chel {
+.catalog-item {
     width: 30%;
     position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.462);
+    gap: 20px;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgb(211, 211, 211);
 }
 
-.chel > img {
+.catalog-item > a {
+    position: absolute;
     width: 100%;
-    height: 300px;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.catalog-item > img {
+    width: 100%;
+    height: 350px;
+
+}
+
+.catalog-item > p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.catalog-item-name {
+    font-weight: 700;
+    font-size: 22px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.catalog-item-name::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(211, 211, 211);
+    left: 0;
+    top: 0;
 }
 
 
 
+
+
+
+
+
+
+.logo{
+    height: 100px;
+    width: 150px;
+}
+
+.maps{
+    width: 90%;
+    height: 650px;
+border-radius: 10%;
+
+}
+.wheres{
+    font-size: 25px;
+text-align: center;
+}
+.abouts{
+    text-align: center;
+}
 
 
 

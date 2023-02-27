@@ -12,7 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/style.css?12">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -21,16 +21,18 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                       <a href="/public"> <img class="logo" src="../resources/views/img/logo.png" alt="*"></a>
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a  class="nav-link" href="/">Каталог</a> </li> 
-                        <li class="nav-item"><a class="nav-link" href="/where">Где мы</a> </li> 
+                        <li class="nav-item"><a  class="nav-link" href="/public">О нас</a> </li>
+                        <li class="nav-item"><a  class="nav-link" href="/public/catalog">Каталог</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="/public/where">Где мы</a> </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -39,13 +41,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a>
                                 </li>
                             @endif
                         @else
