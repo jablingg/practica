@@ -59,15 +59,6 @@
     left: 0;
     top: 0;
 }
-
-
-
-
-
-
-
-
-
 .logo{
     height: 100px;
     width: 150px;
@@ -85,11 +76,47 @@ text-align: center;
 }
 .abouts{
     text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 5px black;
+}
+.catalog-items{
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.462);
+    gap: 20px;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgb(211, 211, 211);
 }
 
+.slaiders {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.carousel.slide {
+    width: 60%;
+}
 
+.carousel-control-prev, .carousel-control-next {
+    color: gray;
+}
 
+.carousel-control-prev-icon  {
 
+    background-image: url(../resources/views/img/knopka-left.svg) !important;
+}
 
+.carousel-control-next-icon  {
 
+    background-image: url(../resources/views/img/knopka-right.svg) !important;
+}

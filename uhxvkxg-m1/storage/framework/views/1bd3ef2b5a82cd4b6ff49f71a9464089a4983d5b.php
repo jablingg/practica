@@ -30,9 +30,9 @@
                     <!-- Left Side Of Navbar -->
                        <a href="/public"> <img class="logo" src="../resources/views/img/logo.png" alt="*"></a>
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a  class="nav-link" href="/public">О нас</a> </li>
-                        <li class="nav-item"><a  class="nav-link" href="/public/catalog">Каталог</a> </li>
-                        <li class="nav-item"><a class="nav-link" href="/public/where">Где мы</a> </li>
+                        <li class="nav-item"><a  class="nav-link" href="<?php echo e(route ('glav')); ?>">О нас</a> </li>
+                        <li class="nav-item"><a  class="nav-link" href="<?php echo e(route ('catalog')); ?>">Каталог</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo e(route ('gde')); ?>">Где мы</a> </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
