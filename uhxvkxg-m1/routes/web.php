@@ -15,8 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/where', function () {
     return view('where');
 })->name('gde');;
-Route::get('/','App\Http\Controllers\grops@slider')->name('glav');;
-Route::get('/catalog','App\Http\Controllers\grops@producted')->name('catalog');;
-
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/catalog',[App\Http\Controllers\CatalogController::class, 'producted'])->name('catalog');
+Route::get('/',[App\Http\Controllers\CatalogController::class, 'slider'])->name('glav');

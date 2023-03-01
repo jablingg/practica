@@ -2,21 +2,20 @@
 @section('content')
 
     <div class="slaiders">
+        <h1>Улучшай свою игру c</h1>
         <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+           
             <div class="carousel-inner">
                 @foreach ($a as $b)
                     @if ($loop -> first)
                         <div class="carousel-item active">
-                            <img src="{{ $b -> img }}" class="d-block w-100" alt="{{ $b -> id }}">
+                            <img  src="{{ $b -> img }}" class="d-block w-100" alt="{{ $b -> id }}" >
+                            <p class="catalog-item-name">{{ $b->name }}</p>
                         </div>
                     @else
                         <div class="carousel-item">
-                            <img src="{{ $b -> img }}" class="d-block w-100" alt="{{ $b -> id }}">
+                            <img  src="{{ $b -> img }}"  class="d-block w-100"   alt="{{ $b -> id }}">
+                            <p class="catalog-item-name">{{ $b->name }}</p>
                         </div>
                     @endif
                 @endforeach
@@ -33,4 +32,5 @@
     </div>
 
 
+    
 @endsection
