@@ -17,4 +17,10 @@ class CatalogController extends Controller
         $a = catalog::orderby($id, $sort) ->limit(5) -> get();
         return view('about', ['a' => $a]);
     }
+
+    public function singleproduct($id){
+        $a = catalog::find($id);
+        return view('singlesproduct', ['a' => $a]);
+    }
+
 }

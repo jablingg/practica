@@ -7,7 +7,7 @@
                 <img class="logs" src="<?php echo e($b->img); ?>">
                 <p class="catalog-item-name"><?php echo e($b->name); ?></p>
                 <p class="catalog-item-price"><?php echo e($b->price); ?></p>
-                <a href="#"></a>
+                <a class="catalog-item-links" href="/public/catalog/<?php echo e($b->id); ?>"></a>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>

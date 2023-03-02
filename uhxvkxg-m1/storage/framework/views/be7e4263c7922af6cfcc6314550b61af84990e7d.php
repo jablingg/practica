@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><?php echo e(__('Dashboard')); ?></div>
+                <div class="card-header"><?php echo e(__('панель приборов')); ?></div>
 
                 <div class="card-body">
                     <?php if(session('status')): ?>
@@ -13,7 +13,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <?php echo e(__('You are logged in!')); ?>
+                    <?php echo e(__('Вы вошли!')); ?>
 
                 </div>
             </div>

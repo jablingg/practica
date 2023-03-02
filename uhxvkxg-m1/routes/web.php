@@ -19,3 +19,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/catalog',[App\Http\Controllers\CatalogController::class, 'producted'])->name('catalog');
 Route::get('/',[App\Http\Controllers\CatalogController::class, 'slider'])->name('glav');
+Route::get('/catalog/{id}',[App\Http\Controllers\CatalogController::class, 'singleproduct']);

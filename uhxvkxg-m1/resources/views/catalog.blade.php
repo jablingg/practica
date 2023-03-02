@@ -10,7 +10,7 @@
                 <img class="logs" src="{{ $b->img }}">
                 <p class="catalog-item-name">{{ $b->name }}</p>
                 <p class="catalog-item-price">{{ $b->price }}</p>
-                <a href="#"></a>
+                <a class="catalog-item-links" href="/public/catalog/{{$b->id}}"></a>
             </div>
             @endforeach
         </div>
