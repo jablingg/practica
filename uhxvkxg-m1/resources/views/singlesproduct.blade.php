@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
-        <div>
-        <div class="catalog-item">
-                <img class="logs" src="{{ $a->img }}">
-                <p class="catalog-item-name">Наименование:{{ $a->name }}</p>
-                <p class="catalog-item-price">Цена:{{ $a->price }}</p>
-                <p class="catalog-item-price">Описание:{{ $a->description }}</p>
-                <p class="catalog-item-price">Год выпуска:{{ $a->production_yaer}}</p>
-            </div>
+        <div class="single">
+                <div class="single-item">
+                        <img class="img_prod" src="{{ $a->img }}">
+                        <p class="single-item-name">Наименование:{{ $a->name }}</p>
+                        <p class="single-item-price">Описание:{{ $a->description }}</p>
+                        <p class="single-item-price">Год выпуска:{{ $a->production_yaer}}</p>
+                        <p class="single-item-price">Цена:{{ $a->price }}</p>
+                        <button type="submit" class="btn btn-primary"><a class="nav-link" href="{{ route ('bskt') }}"> Заказать</a></button>
+                </div>
         </div>  
 @endsection

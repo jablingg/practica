@@ -3,16 +3,16 @@
 
 @section('content')
 
-
-        <div class="catalog">
-            @foreach ($a as $b)
+<h1>Корзина</h1>
+    @foreach ($p as $j)
+<div>
             <div class="catalog-item">
-                <img class="logs" src="{{ $b->img }}">
-                <p class="catalog-item-name">{{ $b->name }}</p>
-                <p class="catalog-item-price">{{ $b->price }}</p>
-                <a class="catalog-item-links" href="/public/catalog/{{$b->id}}"></a>
+                <img src="{{$j->catalogs->img}}">
+                <p class="catalog-item-name">{{ $j->catalogs->name}}</p>
+                <p class="catalog-item-price">{{ $j->catalogs->price}}</p>
+                    <a href="/public/basket/{{$j->id}}/delete" class="btn btn-primary">удалить</a>
             </div>
+</div>            
             @endforeach
-        </div>
 
 @endsection

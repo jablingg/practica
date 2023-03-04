@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class CatalogController extends Controller
 {
-    public function producted($id = "id", $sort = "desc") {
-        $a = catalog::orderby($id, $sort) -> get();
-        return view('catalog', ['a' => $a]);
-    }
+  //  public function producted($add=0, $id = "id", $sort = "desc") {
+  //      $a = catalog::orderby($id, $sort) -> get();
+   //     return view('catalog', ['a' => $a, "add"=>$add]);
+  //  }
 
     public function slider($id = "id", $sort = "desc") {
         $a = catalog::orderby($id, $sort) ->limit(5) -> get();

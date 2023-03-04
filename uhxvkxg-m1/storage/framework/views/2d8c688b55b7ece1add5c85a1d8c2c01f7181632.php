@@ -4,12 +4,15 @@
         <div class="catalog">
             <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="catalog-item">
-                <img class="logs" src="<?php echo e($b->img); ?>">
+                <a class="catalog-item-links" href="/public/catalog/<?php echo e($b->id); ?>"></a>
+                <img src="<?php echo e($b->img); ?>">
                 <p class="catalog-item-name"><?php echo e($b->name); ?></p>
                 <p class="catalog-item-price"><?php echo e($b->price); ?></p>
-                <a class="catalog-item-links" href="/public/catalog/<?php echo e($b->id); ?>"></a>
+                    
+                <button type="submit" class="btn btn-primary"><a class="nav-link" href="<?php echo e(route ('bskt')); ?>"> Заказать</a></button>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+          
         </div>
 
 <?php $__env->stopSection(); ?>

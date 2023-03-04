@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\basket;
+use App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\BasketController;
+
 
 
 class BasketController extends Controller
@@ -12,7 +17,7 @@ class BasketController extends Controller
     $id_user=Auth::user()->id;
     $p=basket::where("user_id",$id_user)->get();
     Auth::user()->id;
-    return view('basket',copmact('p'));
+    return view('basket',compact('p'));
 
 }
 public function products($id) {
@@ -25,7 +30,11 @@ public function products($id) {
 }
 public function deletebasket($id) {
 basket::find($id)->delete();
-return redirect()->route('delete')->with('товар был удален');
+return redirect()->route('basket')->with('товар был удален');
 
+}
+public function baskett($add=0) {
+$a=DB::table('catalogs')->get();
+return view('catalog',["a"=>$a, "add"=>$add]);
 }
 }

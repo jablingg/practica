@@ -2,17 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\product;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class basket extends Model
 {
-    use HasFactory;
    protected $table="baskets";
    protected $filltable=['user_id',
    'product_id',
    'quantity',];
    public function products(){
-    return $this->hasone(basketController::class, 'id', 'product_id');
+    return $this->hasone(product::class, 'id', 'product_id');
    }
 }
