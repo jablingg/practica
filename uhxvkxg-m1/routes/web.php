@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use  App\Http\Controllers\CatalogController;
+use App\Models\product;
 use  App\Http\Controllers\BasketController;
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,7 @@ Route::get('/where', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/catalog/{id}',[App\Http\Controllers\CatalogController::class, 'singleproduct']);
-Route::get('/catalog/{add?}',[App\Http\Controllers\BasketController::class, 'baskett'])->name('catalog');
+Route::get('/catalog/{add?}',[App\Http\Controllers\BasketController::class, 'showes'])->name('catalog');
 Route::get('/basket',[BasketController::class, 'baskets'])->name('bskt');
 Route::get('/basket/{id?}',[BasketController::class, 'products']);
 Route::get('/basket/{id?}/delete',[BasketController::class, 'deletebasket']);

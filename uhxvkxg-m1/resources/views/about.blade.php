@@ -4,7 +4,7 @@
     <div class="slaiders">
         <h1>Улучшай свою игру c</h1>
         <div id="carouselExampleIndicators" class="carousel slide">
-           
+
             <div class="carousel-inner">
                 @foreach ($a as $b)
                     @if ($loop -> first)
@@ -32,5 +32,5 @@
     </div>
 
 
-    
+
 @endsection

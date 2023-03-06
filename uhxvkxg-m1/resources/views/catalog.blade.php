@@ -11,11 +11,11 @@
                 <img src="{{ $b->img }}">
                 <p class="catalog-item-name">{{ $b->name }}</p>
                 <p class="catalog-item-price">{{ $b->price }}</p>
-                    
-                <button type="submit" class="btn btn-primary"><a class="nav-link" href="{{ route ('bskt') }}"> Заказать</a></button>
+
+                <button type="submit" class="btn btn-primary"><a class="nav-link" href="/public/basket/{{$b -> id  }}"> Заказать</a></button>
             </div>
             @endforeach
-          
+
         </div>
 
 @endsection

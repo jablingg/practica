@@ -8,11 +8,11 @@
                 <img src="<?php echo e($b->img); ?>">
                 <p class="catalog-item-name"><?php echo e($b->name); ?></p>
                 <p class="catalog-item-price"><?php echo e($b->price); ?></p>
-                    
-                <button type="submit" class="btn btn-primary"><a class="nav-link" href="<?php echo e(route ('bskt')); ?>"> Заказать</a></button>
+
+                <button type="submit" class="btn btn-primary"><a class="nav-link" href="/public/basket/<?php echo e($b -> id); ?>"> Заказать</a></button>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-          
+
         </div>
 
 <?php $__env->stopSection(); ?>

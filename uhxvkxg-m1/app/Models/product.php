@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Models;
-
-use App\Models\product;
+use App\Models\basket;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 

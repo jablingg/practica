@@ -3,7 +3,7 @@
     <div class="slaiders">
         <h1>Улучшай свою игру c</h1>
         <div id="carouselExampleIndicators" class="carousel slide">
-           
+
             <div class="carousel-inner">
                 <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <?php if($loop -> first): ?>
@@ -31,7 +31,7 @@
     </div>
 
 
-    
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /srv/users/vybtfafs/uhxvkxg-m1/resources/views/about.blade.php ENDPATH**/ ?>

@@ -33,6 +33,7 @@
                         <li class="nav-item"><a  class="nav-link" href="<?php echo e(route ('glav')); ?>">О нас</a> </li>
                         <li class="nav-item"><a  class="nav-link" href="<?php echo e(route ('catalog')); ?>">Каталог</a> </li>
                         <li class="nav-item"><a class="nav-link" href="<?php echo e(route ('gde')); ?>">Где мы</a> </li>
+                        <li class="nav-item"><a class="nav-link" href="<?php echo e(route ('bskt')); ?>">Корзина</a> </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
