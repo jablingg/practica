@@ -1,7 +1,10 @@
 <?php $__env->startSection('content'); ?>
 
     <div class="slaiders">
-        <h1>Улучшай свою игру c</h1>
+        <div class="deviz">
+            <h1>Улучшай свою игру c</h1>
+             <img class="logo" src="/resources/views/img/logo.png" alt="*">
+         </div>
         <div id="carouselExampleIndicators" class="carousel slide">
 
             <div class="carousel-inner">

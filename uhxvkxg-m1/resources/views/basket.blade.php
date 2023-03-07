@@ -12,8 +12,7 @@
                 <img src="{{$j->products->img}}" alt="*">
                 <p class="catalog-item-name">{{ $j->products->name}}</p>
                 <p class="catalog-item-price">{{ $j->products->price}}</p>
-                    <a href="/public/basket/{{$j->id}}/delete" class="*">удалить</a>
-
+                    <button type="submit" class="btn btn-primary"><a class="nav-link" href="/public/basket/{{$j->id}}/delete"> Удалить</a></button>
             </div>
                         @endforeach
 

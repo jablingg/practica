@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('description');
             $table->string('production_yaer');
 	         $table->string('category');
+             $table->string('country');
+             $table->string('quantity');
+
         });
     }
 
