@@ -12,7 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="/public/style.css?1234">
+    <link rel="stylesheet" href="/public/style.css?12345">
 
     <!-- Scripts -->
     <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
@@ -39,7 +39,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo e(route('admn')); ?>"><?php echo e(__('Админ')); ?></a>
+                        </li>
                         <?php if(auth()->guard()->guest()): ?>
+
                             <?php if(Route::has('login')): ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Войти')); ?></a>

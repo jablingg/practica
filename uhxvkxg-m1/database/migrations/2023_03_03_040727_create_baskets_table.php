@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->id();
-            $table->integer('basket_id');
             $table->integer('product_id');
             $table->integer('timestamps');
             $table->integer('quantity');

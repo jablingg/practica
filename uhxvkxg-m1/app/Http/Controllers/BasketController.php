@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\basket;
 use App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\product;
+use App\Models\product as pr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BasketController;
@@ -36,9 +36,26 @@ basket::find($id)->delete();
 return redirect()->route('bskt');
 
 }
-//public function showes($add=0) {
-//$a=DB::table('catalogs')->get();
-//return view('catalog',["a"=>$a, "add"=>$add]);
+public function store(request $req) {
+    $k=$req->file('img');
+    $filename=$k->move(public_path('img'),$k->getClientOriginalName());
+    pr::create([
+        'name'=>$req->input('name'),
+        'img'=>'/public/img/'.$k->getClientOriginalName(),
+        'category'=>$req->input('category'),
+        'contry'=>$req->input('contry'),
+        'production_yaer'=>$req->input('production_yaer'),
+        'description'=>$req->input('description'),
+        'price'=>$req->input('price'),
+    ]);
+    return view('admin');
+   }
+        public function addstore() {
+        if( Auth::user()->name=="admin"){
+            return view('admin');
+        }else{
+            return redirect()->route('about');
+        }
 
-//}
+   }
 }
