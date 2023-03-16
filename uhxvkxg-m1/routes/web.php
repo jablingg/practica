@@ -31,4 +31,7 @@ Route::get('/basket/{id?}/delete',[BasketController::class, 'deletebasket']);
 
 Route::get('/admin',[BasketController::class, 'addstore'])->name('admn');;
 Route::post('/products',[BasketController::class, 'store'])->name('add-form');
+Route::get('/admin/{id?}/delete',[BasketController::class, 'deleteitem']);
+Route::post('cart/update/{id}',[BasketController::class,'update'])->name('cartUpadate');
+
 Route::get('/',[App\Http\Controllers\CatalogController::class, 'slider'])->name('glav');
